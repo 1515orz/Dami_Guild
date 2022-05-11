@@ -9,7 +9,7 @@ from cronjob.main import cron_add_dragon_coin
 from handler.at_message import at_message_handler
 from handler.member_event import guild_member_event_handler
 from handler.message import message_handler
-#
+
 #                  ___====-_  _-====___
 #            _--^^^#####//      \\#####^^^--_
 #         _-^##########// (    ) \\##########^-_
