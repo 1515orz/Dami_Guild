@@ -5,7 +5,7 @@ import qqbot
 from apscheduler.schedulers.background import BackgroundScheduler
 from qqbot.core.util.yaml_util import YamlUtil
 
-from cronjob.dragon import cron_add_dragon_coin
+from cronjob.main import cron_add_dragon_coin
 from handler.at_message import at_message_handler
 from handler.member_event import guild_member_event_handler
 from handler.message import message_handler
@@ -26,9 +26,9 @@ from handler.message import message_handler
 #                     (  | |  | |  )
 #                    __\ | |  | | /__
 #                   (vvv(VVV)(VVV)vvv)
-#                  神兽保佑     神龙在此
-#                代码无BUG!     代码坚不可摧
-#                      SOLID CODE
+#                  神兽保佑      神龙在此
+#                代码无BUG!      代码坚不可摧！
+#                       SOLID CODE
 
 if __name__ == '__main__':
     config = YamlUtil.read(os.path.join(os.path.dirname(__file__), "config.yaml"))
@@ -45,7 +45,7 @@ if __name__ == '__main__':
 
     # 定时任务
     scheduler = BackgroundScheduler(timezone=pytz.timezone('Asia/Shanghai'))
-    scheduler.add_job(cron_add_dragon_coin, 'cron', hour='8', minute='1')
+    scheduler.add_job(cron_add_dragon_coin, 'cron', hour='0', minute='0')
     scheduler.start()
 
     # 注册消息处理器并启动
